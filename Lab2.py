@@ -9,6 +9,6 @@ car_name = "Subaru"
 x = 50
 my_first_name = "Galvin"
 print(car_name, x, my_first_name, car_name)
-type(car_name)
+type("Subaru")
 type(50)
 type("Galvin")
