@@ -1,16 +1,37 @@
-# Step 1: Open Grocery Dictionary
-groceries = {"Chicken": "$1:59" , "Beef": "$1:99" , "Cheese": "$1:00" , "Milk": "$2.50", "Apples": "$1.25", "Oranges": "$1:30", "Cherries": "$1:40"}
+def rectangleArea(width,height):
+    area = width * height
+    return area
 
-# Step 2: Create a function that takes the price of two menu items and adds them together, returning the total sum.
-def priceTotal(price1, price2):
-    sum = (price1 + price2)
-    print("The total price of Chicken and Beef is " + str(sum))
-    
-print(priceTotal(groceries.get("Chicken"), groceries.get("Beef")))
+print(rectangleArea(4,6))
+print(rectangleArea(7,9))
 
-# Step 3: Create a function that finds the difference in price between two menu items.
-def priceDifference(price1, price2):
-    difference = (price1 - price2)
-    print("The difference price of Beef and Chicken is " + str(difference))
-    
-print(priceDifference(groceries.get("Beef"), groceries.get("Chicken")))
+rectOne = rectangleArea(4,6)
+rectTwo = rectangleArea(7,9)
+
+print(rectOne + rectTwo)
+
+# Official lab starts now
+groceries = {"Chicken": 1.59 , "Beef": 1.99 , "Cheese": 1.00 , "Milk": 2.50}
+shoes = {"Jordan 13": 1 , "Yeezy": 8 , "Foam Posite": 10 , "Air Max": 5 , "SB Dunk": 20}
+
+"Chicken", "Beef", "Cheese", "Milk"
+
+def total_price(item1, item2):
+    item1_price = groceries[item1]
+    item2_price = groceries[item2]
+    price = (item1_price + item2_price)
+
+    return price
+
+print("The price of Chicken and Cheese is: " + str(total_price("Chicken", "Cheese")))
+print("The price of Beef and Milk is: " + str(total_price("Beef", "Milk")))
+
+def price_difference(item1, item2):
+    item1_price = groceries[item1]
+    item2_price = groceries[item2]
+    price = (item1_price - item2_price)
+
+    return price
+
+print("The difference between Chicken and Cheese is: " + str(price_difference("Chicken", "Cheese")))
+print("The difference between Milk and Beef is: " + str(price_difference("Milk", "Beef")))
